@@ -31,7 +31,12 @@ python -m venv .venv
 ```
 ---
 
-## 3. Set Your Autosend API Key
+## 3. Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+## 4. Set Your Autosend API Key
 
 ### **macOS / Linux**
 
@@ -47,7 +52,7 @@ setx AUTOSEND_API_KEY "your_api_key_here"
 
 ---
 
-## 4. Start the Server
+## 5. Start the Server
 
 From the project’s root directory:
 
@@ -63,7 +68,7 @@ uvicorn app.main:app --reload
 
 ---
 
-## 5. Test the Endpoints
+## 6. Test the Endpoints
 
 Use **curl**, **HTTPie**, or **Postman**.
 
@@ -117,7 +122,7 @@ Expected output:
 
 ---
 
-## 6. Common Issues
+## 7. Common Issues
 
 ### **1. “KeyError: AUTOSEND_API_KEY”**
 
@@ -139,7 +144,7 @@ and restart.
 
 ---
 
-## 7. Stopping the Server
+## 8. Stopping the Server
 
 Press:
 
