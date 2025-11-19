@@ -1,4 +1,4 @@
-# delete_by_user_id
+# `delete_by_user_id()`
 
 Delete a contact from AutoSend using your application’s user identifier.  
 This method sends a request to the `DELETE /contacts/email/userId/{userId}` endpoint and permanently removes the associated contact.
@@ -16,7 +16,7 @@ If the user ID is missing or invalid, an error is raised before the request is m
 
 ## Arguments
 
-**user_id**  
+**`user_id`**  
 A non-empty string representing your application’s unique user identifier.  
 This value is matched against the `userId` field stored for a contact in AutoSend.
 
@@ -31,10 +31,10 @@ The structure typically includes confirmation of deletion or any related metadat
 
 ## Errors
 
-**ValueError**  
+### ValueError
 Raised when the provided `user_id` is empty or invalid.
 
-**APIError**  
+### APIError
 Raised when the API rejects the request or returns a failure status, such as authentication issues or a missing contact record.
 
 ---

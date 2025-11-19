@@ -9,69 +9,69 @@ You must initialize it with your API key before calling any functions.
 from autosend import AutosendClient
 
 client = AutosendClient(api_key="YOUR_AUTOSEND_API_KEY")
-````
+```
 
 The `api_key` is required.
 You can find your key in the AutoSend dashboard:
 
 ```
 https://autosend.com/settings/api-key
+```
 
-## Optional Parameters
+# Client configuration
 
-The client supports a few optional arguments.
+The `AutosendClient` is the primary entry point for the Autosend Python SDK. Initialize a single client instance and reuse it across your application.
 
-### `base_url`
+## Quick initialization
 
-Use this only if you are testing against a custom or staging server.
+```python
+from autosend import AutosendClient
+import os
+
+# Read API key from environment (recommended)
+client = AutosendClient(api_key=os.getenv("AUTOSEND_API_KEY"))
+```
+
+The `api_key` argument is required. You can obtain your API key from the AutoSend dashboard.
+
+## Configuration options
+
+The client supports a few common options when constructing the instance.
+
+- api_key (str, required): Your AutoSend API key.
+
+Example with optional settings:
 
 ```python
 client = AutosendClient(
-    api_key="YOUR_KEY",
-    base_url="https://api.autosend.com"
+    api_key="YOUR_KEY"
 )
 ```
 
-Default is the official Autosend API URL.
+## What the client does for you
 
-### `timeout`
+- Attaches the API key and required headers to each request
+- Formats and validates request payloads
+- Sends requests (single and bulk email endpoints)
+- Manages contact operations (create, update/upsert, search, remove)
+- Wraps API errors into Python exceptions for easier handling
 
-Set a custom request timeout (in seconds):
+## Best practices
 
-```python
-client = AutosendClient(
-    api_key="YOUR_KEY",
-    timeout=10
-)
-```
+- Store your API key in an environment variable (do not hard-code it).
+- Reuse a single `AutosendClient` instance rather than re-creating it per request.
+- Catch and handle client exceptions where appropriate (network errors, validation errors, API errors).
 
-Default: `30` seconds.
-
----
-
-## What the client handles
-
-* attaches the API key to every request
-* validates your inputs
-* formats JSON payloads
-* wraps API errors into simple Python exceptions
-
----
-
-## Example: basic usage
+## Example: send a single email
 
 ```python
 client = AutosendClient(api_key="YOUR_KEY")
 
 response = client.send_email(
-    to="test@example.com",
-    template_id="welcome",
-    data={"name": "User"}
+    to="user@example.com",
+    template_id="welcome-template",
+    data={"name": "Jane"}
 )
-```
 
----
-
-This is all you need to configure the client before using the email or contact modules.
-
+print(response)
 ```

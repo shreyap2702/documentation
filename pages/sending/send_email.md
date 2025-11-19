@@ -1,6 +1,6 @@
-# send_email
+# `send_email()`
 
-Send a single transactional or marketing email through the `/mails/send` endpoint.
+Send a single transactional or marketing email through the `POST/mails/send` endpoint.
 
 ## What this function does
 
@@ -17,44 +17,44 @@ The SDK handles validation, payload structure, and the final POST request.
 
 ## Arguments
 
-**to_email**
+**`to_email`**
 Recipient’s email address.
 
-**to_name**
+**`to_name`**
 Recipient’s display name.
 
-**from_email**
+**`from_email`**
 Sender’s email address.
 
-**from_name**
+**`from_name`**
 Sender’s display name.
 
-**subject**
+**`subject`**
 Subject line of the email.
 
-**html**
+**`html`**
 HTML content of the email.
 
-**dynamic_data**
+**`dynamic_data`**
 Dictionary of template variables used inside HTML or templates.
 
-**reply_to_email** *(optional)*
+**`reply_to_emai`l** *(optional)*
 Custom reply-to address.
 
-**attachments** *(optional)*
+**`attachments`** *(optional)*
 A list of attachments following the Autosend API format.
 
-**unsubscribe_url** *(optional)*
+**`unsubscribe_url`** *(optional)*
 RFC 2369 compliant unsubscribe URL.
 
-**unsubscribe_group_id** *(optional)*
+**`unsubscribe_group_id`** *(optional)*
 Unsubscribe group/category ID for grouped marketing preferences.
 
 ---
 
 ## Errors
 
-**ValidationError**
+### ValidationError
 Raised when:
 
 * attachments exceed limits
@@ -62,7 +62,7 @@ Raised when:
 * dynamic data validation fails
 * unsubscribe URL is invalid
 
-**APIError**
+### APIError
 Raised when the AutoSend API returns an error (4xx or 5xx).
 
 ---

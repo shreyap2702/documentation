@@ -11,7 +11,7 @@ This is a minimal app designed for learning and reference—not production compl
 
 ---
 
-## What this Example Does**
+## What this Example Does
 
 ### **1. Store Subscribers**
 

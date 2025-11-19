@@ -1,4 +1,4 @@
-# get_unsubscribe_groups
+# `get_unsubscribe_groups()`
 
 Retrieve all unsubscribe groups associated with a specific contact.  
 This method queries the `GET /contacts/{id}/unsubscribe-groups` endpoint and returns the groups the contact is currently unsubscribed from or subscribed to.
@@ -15,7 +15,7 @@ If the contact ID is missing or invalid, validation fails before the request is 
 
 ## Arguments
 
-**contact_id**  
+**`contact_id`**  
 A non-empty string representing the AutoSend contact identifier.  
 This is the system-generated contact ID returned during contact creation or update operations.
 
@@ -30,10 +30,10 @@ The response typically includes information about subscription groups and the co
 
 ## Errors
 
-**ValueError**  
+### ValueError  
 Raised when `contact_id` is empty or missing.
 
-**APIError**  
+### APIError
 Raised when the API returns an authentication error, invalid contact ID error, or any server-side failure.
 
 ---

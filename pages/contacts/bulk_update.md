@@ -1,7 +1,7 @@
-# bulk_update
+# `bulk_update()`
 
 Create or update multiple contacts in a single request.  
-This method uses the `POST /contacts/bulk-update` endpoint to process up to 100 contacts at once.
+This method uses the `POST/contacts/bulk-update` endpoint to process up to 100 contacts at once.
 
 ---
 
@@ -17,13 +17,13 @@ This method allows efficient synchronization of large contact lists.
 
 ## Arguments
 
-**contacts**  
+**`contacts`**  
 A list containing one or more contact dictionaries.  
 Each contact must include an `email` field.  
 The list must not be empty and cannot exceed one hundred contacts.  
 Each email address is validated before the request is made.
 
-**run_workflow**  
+**`run_workflow`**  
 A boolean value indicating whether associated workflows should be triggered after updating the contacts.  
 Defaults to `False`.
 
@@ -38,10 +38,10 @@ The response includes the status of each contact, indicating whether it was crea
 
 ## Errors
 
-**ValidationError**  
+### ValidationError
 Raised when the list is empty, when the list is not a proper list, when it exceeds one hundred items, or when a contact is missing an email or contains an invalid email address.
 
-**APIError**  
+### APIError
 Raised when the AutoSend API fails to process the request due to authentication errors, invalid payload, or internal server issues.
 
 ---

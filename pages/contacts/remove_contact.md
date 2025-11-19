@@ -1,4 +1,4 @@
-# remove_contacts
+# `remove_contacts()`
 
 Remove one or more contacts using the `/contacts/remove` endpoint.  
 This method deletes contacts from AutoSend based on their email addresses.
@@ -11,7 +11,7 @@ The method validates that at least one email is provided and ensures each email 
 
 ## Arguments
 
-**emails**
+**`emails`**
 A list containing one or more email addresses.
 Each email must be valid.
 At least one email is required.
@@ -20,10 +20,10 @@ At least one email is required.
 
 ## Errors
 
-**ValidationError**
+### ValidationError
 Raised when the list is empty or when any email address is invalid.
 
-**APIError**
+### APIError
 Raised when the AutoSend API cannot process the delete request.
 
 ---

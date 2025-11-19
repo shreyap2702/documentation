@@ -1,4 +1,4 @@
-# delete_by_id
+# `delete_by_id()`
 
 Delete a contact from AutoSend using its unique contact ID.  
 This method calls the `DELETE /contacts/{id}` endpoint and permanently removes the contact.
@@ -15,7 +15,7 @@ If the ID is invalid or the contact does not exist, the API will return an error
 
 ## Arguments
 
-**contact_id**  
+**`contact_id`**  
 A non-empty string representing the AutoSend contact identifier.  
 This is the unique ID returned whenever a contact is created or updated.
 
@@ -30,10 +30,10 @@ This commonly includes fields such as a success status or a message from AutoSen
 
 ## Errors
 
-**ValueError**  
+### ValueError
 Raised when the provided `contact_id` is empty.
 
-**APIError**  
+### APIError
 Raised when the API fails to process the delete request due to authentication issues, invalid IDs, or server errors.
 
 ---

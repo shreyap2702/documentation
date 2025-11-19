@@ -1,6 +1,6 @@
-# send_bulk
+# `send_bulk()`
 
-Send the same email to multiple recipients in a single request using the `/mails/bulk` endpoint.
+Send the same email to multiple recipients in a single request using the `POST/mails/bulk` endpoint.
 
 ## What this function does
 
@@ -19,50 +19,50 @@ All recipients receive the same email template, with dynamic data applied to eac
 **recipients**
 List of recipient dictionaries, each containing:
 
-* `"email"` — recipient email
-* `"name"` — recipient name
+* `email` — recipient email
+* `name` — recipient name
   Minimum: 1
   Maximum: 100
 
-**from_email**
+**`from_email`**
 Sender’s email address.
 
-**from_name**
+**`from_name`**
 Sender’s display name.
 
-**subject**
+**`subject`**
 Subject line of the email.
 
-**html**
+**`html`**
 HTML body of the email.
 Supports dynamic placeholders like `{{name}}`.
 
-**dynamic_data**
+**`dynamic_data`**
 Dictionary of template variables for personalization.
 
-**reply_to_email** *(optional)*
+**`reply_to_email`** *(optional)*
 Email replies should go to this address.
 
-**unsubscribe_url** *(optional)*
+**`unsubscribe_url`** *(optional)*
 RFC 2369 compliant unsubscribe link.
 
-**unsubscribe_group_id** *(optional)*
+**`unsubscribe_group_id`** *(optional)*
 Category/group ID for marketing email preference management.
 
 ---
 
 ## Errors
 
-**ValidationError**
+### ValidationError
 Raised when:
 
 * recipients list is empty
 * more than 100 recipients
-* a recipient is missing `"email"` or `"name"`
+* a recipient is missing `email` or `name`
 * dynamic data fails validation
 * unsubscribe URL is invalid
 
-**APIError**
+### APIError
 Raised when AutoSend returns a 4xx or 5xx error.
 
 ---

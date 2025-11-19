@@ -1,4 +1,4 @@
-# get_contact
+# `get_contact()`
 
 Retrieve a single contact from AutoSend using its unique contact ID.  
 This method calls the `GET /contacts/{id}` endpoint and returns all stored details for that contact.
@@ -16,7 +16,7 @@ If the contact does not exist or the ID is invalid, the method raises an error.
 
 ## Arguments
 
-**contact_id**  
+**`contact_id`**  
 A non-empty string representing the unique identifier of the contact to retrieve.  
 This ID is the internal AutoSend contact ID returned during create or update operations.
 
@@ -40,13 +40,13 @@ The exact structure depends on what data exists for that contact.
 
 ## Errors
 
-**ValueError**  
+### ValueError
 Raised when the provided `contact_id` is empty or missing.
 
-**NotFoundError**  
+### NotFoundError
 Raised when no contact exists with the given ID.
 
-**APIError**  
+### APIError
 Raised for any API failure, including invalid authentication or server errors.
 
 ---

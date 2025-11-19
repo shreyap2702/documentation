@@ -1,4 +1,4 @@
-# search_by_emails
+# `search_by_emails()`
 
 Search for multiple contacts at once using a list of email addresses.  
 This method sends a request to the `/contacts/search/emails` endpoint and returns all matching contacts.
@@ -15,7 +15,7 @@ After successful validation, the method queries the API and returns all contacts
 
 ## Arguments
 
-**emails**  
+**`emails`**  
 A list containing one or more email addresses.  
 Must not be empty, and each email must be formatted correctly.
 
@@ -30,10 +30,10 @@ Each returned contact may include its stored details such as name, email, custom
 
 ## Errors
 
-**ValidationError**  
+### ValidationError
 Raised when no emails are provided or when any email is invalid.
 
-**APIError**  
+### APIError
 Raised when the API request fails due to invalid credentials, incorrect payload, or server issues.
 
 ---

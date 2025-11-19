@@ -34,8 +34,7 @@
         "group": "Sending Emails",
         "pages": [
           "pages/sending/send_email",
-          "pages/sending/send_bulk",
-          "pages/sending/utils"
+          "pages/sending/send_bulk"
         ]
       },
       {
@@ -49,8 +48,7 @@
           "pages/contacts/bulk_update",
           "pages/contacts/delete_by_user_id",
           "pages/contacts/delete_by_id",
-          "pages/contacts/get_unsubscribe_groups",
-          "pages/contacts/utils"
+          "pages/contacts/get_unsubscribe_groups"
         ]
       },
       {
