@@ -1,44 +1,70 @@
 {
-  "pages": [
-    {
-      "group": "Introduction",
-      "pages": [
-        "pages/index",
-        "pages/installation",
-        "pages/quickstart"
-      ]
-    },
-    {
-      "group": "Client",
-      "pages": [
-        "pages/client/configuration"
-      ]
-    },
-    {
-      "group": "Sending Emails",
-      "pages": [
-        "pages/sending/overview",
-        "pages/sending/send_email",
-        "pages/sending/send_bulk"
-      ]
-    },
-    {
-      "group": "Contacts",
-      "pages": [
-        "pages/contacts/overview",
-        "pages/contacts/create_contact",
-        "pages/contacts/upsert_contact",
-        "pages/contacts/get_contact",
-        "pages/contacts/delete_contact",
-        "pages/contacts/search_by_emails",
-        "pages/contacts/bulk_update"
-      ]
-    },
-    {
-      "group": "Reference",
-      "pages": [
-        "pages/errors"
-      ]
-    }
-  ]
+  "name": "Autosend Python SDK",
+  "logo": {
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg"
+  },
+  "favicon": "/favicon.svg",
+  "theme": "mint",
+  "colors": {
+    "primary": "#4B7BF5"
+  },
+  "metadata": {
+    "title": "Autosend Python SDK Documentation",
+    "description": "The official documentation for the Autosend Python SDK, covering installation, client configuration, email sending, and contact management.",
+    "og:title": "Autosend Python SDK Docs",
+    "og:description": "Official documentation for the Autosend Python SDK."
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Introduction",
+        "pages": [
+          "pages/introduction",
+          "pages/overview"
+        ]
+      },
+      {
+        "group": "Client",
+        "pages": [
+          "pages/client/configuration"
+        ]
+      },
+      {
+        "group": "Sending Emails",
+        "pages": [
+          "pages/sending/send_email",
+          "pages/sending/send_bulk",
+          "pages/sending/utils"
+        ]
+      },
+      {
+        "group": "Contacts",
+        "pages": [
+          "pages/contacts/create_contact",
+          "pages/contacts/upsert_contact",
+          "pages/contacts/remove_contact",
+          "pages/contacts/get_contact",
+          "pages/contacts/search_by_emails",
+          "pages/contacts/bulk_update",
+          "pages/contacts/delete_by_user_id",
+          "pages/contacts/delete_by_id",
+          "pages/contacts/get_unsubscribe_groups",
+          "pages/contacts/utils"
+        ]
+      },
+      {
+        "group": "Fast API Example",
+        "pages": [
+          "pages/example/introduction",
+          "pages/example/project_structure",
+          "pages/example/autosend_sdk",
+          "pages/example/api_endpoints",
+          "pages/example/running_app_locally"
+        ]
+      }
+    ],
+    "pages": []
+  },
+  "topbarCtaButton": null
 }
