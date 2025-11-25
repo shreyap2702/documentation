@@ -91,12 +91,12 @@ print(response)
 
 -----
 
-### Create or Update a Contact (Upsert)
+### Create Contact 
 
 ```python
-client.upsert_contact(
-    email="user@example.com",
-    name="John",
-    custom_fields={"plan": "pro"}
+client.create_contact(
+    email="john.doe@example.com",
+    first_name="John",
+    last_name="Doe"
 )
 ```
