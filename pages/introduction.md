@@ -12,7 +12,6 @@ from autosend import AutosendClient
 
 client = AutosendClient(api_key="YOUR_AUTOSEND_API_KEY")
 
-python
 response = client.send_email(
     to="user@example.com",
     template_id="welcome-template",
