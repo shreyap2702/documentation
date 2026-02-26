@@ -83,7 +83,6 @@
           "pages/example/introduction",
           "pages/example/project_structure",
           "pages/example/autosend_sdk",
-          "pages/example/API_endpoints",
           "pages/example/running_app_locally"
         ]
       }
